@@ -13,6 +13,14 @@ A native Matlab/Octave client for accessing data and metadata from instances of 
 ### getDatasetsOnServer
 
 ```Matlab
+getDatasetsOnServer(serverName);
+```
+
+Returns a cell array of strings containing the output of the RESTful call to an Erddap server's base information page.
+
+#### Example
+
+```Matlab
 em = ErddapMat();
 datasets = em.getDatasetsOnServer("http://erddap.marine.ie");
 ```
