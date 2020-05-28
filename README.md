@@ -12,7 +12,7 @@ A native Matlab/Octave client for accessing data and metadata from instances of 
 
 ### getDatasetsOnServer
 
-```matlab
+```Matlab
 em = ErddapMat();
 datasets = em.getDatasetsOnServer("http://erddap.marine.ie");
 ```
@@ -20,7 +20,7 @@ datasets = em.getDatasetsOnServer("http://erddap.marine.ie");
 ### suggestServers
 
 
-```matlab
+```Matlab
 em = ErddapMat();
 knownServers = em.suggestServers();
 ```
