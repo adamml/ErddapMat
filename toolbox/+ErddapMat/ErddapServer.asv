@@ -1,0 +1,24 @@
+classdef ErddapServer
+
+ properties (Access=private)
+    url     % The web address of the Erddap Server
+ end
+
+ properties
+     status_page_url
+     tabledap_all_datasets
+     version
+     version_numeric
+     version_string
+ end
+
+  methods
+    function obj = ErddapServer(url)
+        obj.url = url;
+        obj.version = webread(obj.url + "version");
+        obj.version_string = strsplit(obj.version, "";
+        obj.version_numeric = obj.version_string;
+    end
+  end
+
+end
