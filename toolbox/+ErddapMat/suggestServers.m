@@ -12,7 +12,7 @@ function serverList = suggestServers()
     %----------------------------------------------------------------------
     % Adam Leadbetter - 2023-June-17
     %
-    serverList = jsondecode(urlread(...
+    serverList = webread(...
             "https://raw.githubusercontent.com/IrishMarineInstitute/" + ...
-            "awesome-erddap/master/erddaps.json"));
+            "awesome-erddap/master/erddaps.json");
 end
