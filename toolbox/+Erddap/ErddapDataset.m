@@ -1,7 +1,7 @@
 classdef ErddapDataset
     %UNTITLED Summary of this class goes here
     %   Detailed explanation goes here
-    
+
     properties
         datasetid
         protocol
@@ -11,7 +11,7 @@ classdef ErddapDataset
         info
         variables
     end
-    
+
     methods
         function obj = ErddapDataset(url, datasetid, protocol)
             if nargin == 2
@@ -21,9 +21,9 @@ classdef ErddapDataset
             obj.datasetid = datasetid;
             obj.protocol = protocol;
 
-            obj.info = webread(url + "info/" + datasetid + "/index.json");
+            obj.info = webread(strcat(url,"info/",datasetid,"/index.json"));
 
-
+            obj.info
             for row = 1:1:length(obj.info.table.rows)
                 row_data = obj.info.table.rows(row);
                 if row_data{1}{1} == "variable"

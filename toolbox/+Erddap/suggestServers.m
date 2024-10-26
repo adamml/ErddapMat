@@ -3,7 +3,7 @@ function serverList = suggestServers()
     %
     % suggestServers()
     %
-    % Returns a list of Errdap servers as curated on the awesome-erddap 
+    % Returns a list of Errdap servers as curated on the awesome-erddap
     % list.
     %
     % See https://github.com/IrishMarineInstitute/awesome-erddap for more
@@ -13,6 +13,7 @@ function serverList = suggestServers()
     % Adam Leadbetter - 2023-June-17
     %
     serverList = webread(...
-            "https://raw.githubusercontent.com/IrishMarineInstitute/" + ...
-            "awesome-erddap/master/erddaps.json");
+            strcat(...
+              "https://raw.githubusercontent.com/IrishMarineInstitute/", ...
+              "awesome-erddap/master/erddaps.json"));
 end
